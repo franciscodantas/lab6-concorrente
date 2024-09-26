@@ -15,7 +15,7 @@ public class TaskProducer implements Runnable {
 
     @Override
     public void run() {
-        Task task = new Task(tasksIds.incrementAndGet(), System.currentTimeMillis());
+        Task task = new Task(tasksIds.incrementAndGet());
         tasks.add(task);
     }
 }

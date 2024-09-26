@@ -28,9 +28,9 @@ public class ScenarioBase {
                 if (taskTimeExecution != null){
                     System.out.println();
                     System.out.println("Id do node " + i);
-                    System.out.println("Tempo ativo de todas as tasks " + taskTimeExecution.timeExecute());
+                    System.out.println("Tempo de execução do node " + taskTimeExecution.timeExecute());
                     System.out.println("Task executada: " + taskTimeExecution.task().getId());
-                    System.out.println("Tempo ativo da task: " + taskTimeExecution.threadTimeExecute());
+                    System.out.println("Tempo de execução da task: " + taskTimeExecution.threadTimeExecute());
                     System.out.println();
                 }
                 else {

@@ -4,19 +4,12 @@ public class Task {
     long id;
     long execDuration;
 
-    long initialTime;
-
-    public Task(long id, long initialTime) {
+    public Task(long id) {
         this.id = id;
-        this.initialTime = initialTime;
     }
 
     public long getId(){
         return this.id;
-    }
-
-    public long getInitialTime() {
-        return initialTime;
     }
 
     synchronized long getExecDuration(){

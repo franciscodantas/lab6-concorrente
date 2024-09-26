@@ -25,10 +25,9 @@ public class Node implements Runnable {
             try {
                 Task task = tasks.take();
                 task.execute();
-                long activeTime = System.currentTimeMillis() - task.getInitialTime();
                 long taskTime = task.getExecDuration();
-                this.timeExec += taskTime + activeTime;
-                TaskTimeExecution taskTimeExecution = new TaskTimeExecution(task, this.timeExec, taskTime + activeTime);
+                this.timeExec += taskTime;
+                TaskTimeExecution taskTimeExecution = new TaskTimeExecution(task, this.timeExec, taskTime);
                 nodeBlockingQueue.put(this.nodeID, taskTimeExecution);
                 tasksExecute.add(task);
             } catch (InterruptedException e) {
